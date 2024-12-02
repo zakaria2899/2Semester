@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CustomerLoginView">
+   <children>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="400.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="400.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tilmeld dig som kunde, eller log ind hvis du allerede er">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="400.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mail adresse:">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#login" prefHeight="30.0" prefWidth="250.0" promptText="ex: eksempel@eksempel.dk">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="400.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CPR-nummer:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </Text>
+            <TextField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#login" prefHeight="30.0" prefWidth="250.0" promptText="med bindestreg(-). ex: 111111-1111">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </TextField>
+         </children></VBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="help" layoutX="338.0" layoutY="41.0" mnemonicParsing="false" onAction="#openContactPage" text="Hjælp" />
+                  <Button fx:id="login" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="100.0" text="Log ind" />
+                  <Button fx:id="register" layoutX="126.0" layoutY="39.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="30.0" prefWidth="100.0" text="Tilmeld" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
